@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="card col-2 text-center d-justify-content-center album-cover" *ngFor="let album of albums | keyvalue">
+        <a [routerLink]="['album', album.key]">
+            <div class="card-body">
+                <h1>{{album.key}}</h1>
+                <p>({{album.value.length}})</p>
+            </div>
+        </a>
+    </div>    
+</div>
